@@ -3,26 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --dark: #070707;
     --sizeindex: calc(1vw +1vh);
     --transition: .75s cubic-bezier(0.3, 0.4, 0, 1);
 }
-
-
 @font-face {
     font-family: raleway_m;
     src: url(/assets/fonts/raleway-v22-cyrillic-300.woff2);
     font-weight: 300;
 }
-
 @font-face {
     font-family: raleway_m;
     src: url(/assets/fonts/raleway-v22-cyrillic-900.woff2);
     font-weight: 900;
 }
-
 body, html {
     width: 100%;
     height: 100%;
@@ -33,26 +28,21 @@ body, html {
     line-height: 1.8;
     font-size: calc(var(--sizeindex) * .99);
 }
-
 .slider {
     height: 100%;
     transform: rotate(15deg);
     overflow: visible;
     top: 10vh;
 }
-
 .slider__wrapper {
     transition: var(--transition);
     will-change: transform;
 }
-
 .slider__item {
     max-height: 75vh;
     overflow: hidden;
     cursor: pointer;
-
 }
-
 .slider__img {
     width: 300%;
     height: 100%;
@@ -61,5 +51,18 @@ body, html {
     left: -100%;
     transition: var(--transition)!important;
     will-change: transform;
+}
+
+.slider_bg {
+    z-index: 0;
+    transform: rotate(-20deg)!important;
+    top: -90vh;
+    left: -10vh;
+    opacity: .2;
+    filter: saturate(15) blur(120px);
+}
+
+.slider_bg .slider__item {
+    max-height: 100vh;
 
 }
