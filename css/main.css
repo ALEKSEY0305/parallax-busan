@@ -26,13 +26,12 @@ body, html {
     font-family: raleway_m, sans-serif;
     overflow: hidden;
     line-height: 1.8;
-    font-size: calc(var(--sizeindex) * .99);
 }
 .slider {
-    height: 100%;
+    height: 75%;
     transform: rotate(15deg);
     overflow: visible;
-    top: 10vh;
+    top: 20vh;
 }
 .slider__wrapper {
     transition: var(--transition);
@@ -75,17 +74,48 @@ body, html {
 }
 .description {
     position: absolute;
-    font-size: calc(var(--sizeindex) * .99);
+    font-size: calc(var(--sizeindex) * 1.2);
     top: 20vh;
-    left: 8vw;
-    max-width: 24vw;
+    left: 4vw;
+    max-width: 30vw;
+    opacity: 0.9;
+    transition: opacity var(--transition), transform var(--transition);
+
 }
 
 .logo {
     font-size: calc(var(--sizeindex) * 3.6);
     font-weight: 900;
     display: inline-block;
-    background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+    background: linear-gradient(45deg,  Tomato, LightSkyBlue, SteelBlue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+.description p {
+    opacity: 0.9;
+    transition: transform var(--transition);
+    transition-duration: 3s;
+}
+.description.hidden {
+    opacity: 0;
+    transform: translateY(9vh);
+}
+
+.description.hidden p {
+    transform: translateY(3vh);
+}
+
+ul {
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+footer{
+    font-family: raleway_m, sans-serif;
+    font-size: calc(var(--sizeindex) * .9);
+    position: absolute;
+    bottom: 0;
+    opacity: .3;
 }
