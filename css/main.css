@@ -32,3 +32,8 @@ body, html {
     line-height: 1.8;
     font-size: calc(var(--sizeindex) * .99);
 }
+
+.slider {
+    height: 100%;
+    transform: rotate(15deg);
+}
