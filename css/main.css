@@ -72,3 +72,20 @@ body, html {
     z-index: 2;
     transform: rotate(-15deg) scale(1.45);
     box-shadow: rgb(0 0 0 / .75) 0 0 0 100000px;
+}
+.description {
+    position: absolute;
+    font-size: calc(var(--sizeindex) * .99);
+    top: 20vh;
+    left: 8vw;
+    max-width: 24vw;
+}
+
+.logo {
+    font-size: calc(var(--sizeindex) * 3.6);
+    font-weight: 900;
+    display: inline-block;
+    background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
