@@ -42,9 +42,10 @@ body, html {
     max-height: 75vh;
     overflow: hidden;
     cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 .slider__img {
-    width: 300%;
+    width: 200%;
     height: 100%;
     background-size: cover;
     position: absolute;
@@ -59,10 +60,32 @@ body, html {
     top: -90vh;
     left: -10vh;
     opacity: .2;
-    filter: saturate(15) blur(120px);
+    filter: blur(120px) saturate(15) ;
 }
 
 .slider_bg .slider__item {
     max-height: 100vh;
 
+}
+
+.slider__item.opened {
+    z-index: 2;
+    transform: rotate(-15deg) scale(1.45);
+    box-shadow: rgb(0 0 0 / .75) 0 0 0 100000px;
+}
+.description {
+    position: absolute;
+    font-size: calc(var(--sizeindex) * .99);
+    top: 20vh;
+    left: 8vw;
+    max-width: 24vw;
+}
+
+.logo {
+    font-size: calc(var(--sizeindex) * 3.6);
+    font-weight: 900;
+    display: inline-block;
+    background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
