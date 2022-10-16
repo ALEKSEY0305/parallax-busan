@@ -66,3 +66,8 @@ body, html {
     max-height: 100vh;
 
 }
+
+.slider__item.opened {
+    z-index: 2;
+    transform: rotate(-15deg); 
+}
