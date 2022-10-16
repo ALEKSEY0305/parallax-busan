@@ -110,7 +110,7 @@ body, html {
 
 footer{
     font-family: raleway_m, sans-serif;
-    font-size: calc(var(--sizeindex) * .9);
+    font-size: calc(var(--sizeindex) * .4);
     position: absolute;
     bottom: 0;
     opacity: .3;
